@@ -1,0 +1,28 @@
+{
+    "name": "@jeroen/calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "build": "npm run clean && npm run compile",
+        "test": "jest",
+        "clean": "rm -rf ./dist",
+        "compile": "tsc -p tsconfig.build.json"
+    },
+    "author": "Jeroen Broekhuizen",
+    "license": "ISC",
+    "dependencies": {
+        "@jeroen/add": "1.0.0",
+        "@jeroen/subtract": "1.0.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+    }
+}

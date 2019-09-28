@@ -1,0 +1,37 @@
+{
+    "name": "lerna-packages",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install": "lerna bootstrap",
+        "test": "jest",
+        "clean": "lerna run clean",
+        "compile": "lerna run compile",
+        "pack-packages": "lerna run pack"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "projects": [
+            "packages/*"
+        ],
+        "preset": "ts-jest",
+        "rootDir": "packages",
+        "moduleNameMapper": {
+            "@jeroen/(.*)": "<rootDir>/$1/src"
+        },
+        "moduleDirectories": [
+            "node_modules",
+            "packages"
+        ]
+    },
+    "dependencies": {
+        "lerna": "^3.16.4",
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+    }
+}

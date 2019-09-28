@@ -1,0 +1,54 @@
+name: 1.0.$(Date:yyyyMMdd)$(Rev:.r)
+
+resources:
+- repo: self
+
+queue:
+  name: Hosted Ubuntu 1604
+
+variables:
+  Configuration: 'Release'
+
+trigger:
+- master
+
+
+steps:
+- task: Npm@1
+  displayName: Install
+  inputs:
+    command: install
+
+- task: Npm@1
+  displayName: Test
+  inputs:
+    command: custom
+    customCommand: 'test'
+
+- task: Npm@1
+  displayName: Clean
+  inputs:
+    command: custom
+    customCommand: 'clean'
+
+- task: Npm@1
+  displayName: Compile
+  inputs:
+    command: custom
+    customCommand: 'compile'
+
+- task: Npm@1
+  displayName: Pack
+  inputs:
+    command: custom
+    customCommand: 'pack-packages'
+
+# - task: Npm@1
+#   displayName: publish
+#   inputs:
+#     command: custom
+#     customCommand: 'publish-packages'
+#     publishRegistry: useFeed
+#     publishFeed: '8f9bd9e8-884b-45bf-bf27-f678c286d67a'
+
+
