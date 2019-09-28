@@ -37,11 +37,11 @@ steps:
     command: custom
     customCommand: 'run compile'
 
-- task: Npm@1
-  displayName: Pack
-  inputs:
-    command: custom
-    customCommand: 'run pack-packages'
+# - task: Npm@1
+#   displayName: Pack
+#   inputs:
+#     command: custom
+#     customCommand: 'run pack-packages'
 
 # - task: npmAuthenticate@0
 #   inputs:
