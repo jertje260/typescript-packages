@@ -29,19 +29,19 @@ steps:
   displayName: Clean
   inputs:
     command: custom
-    customCommand: 'clean'
+    customCommand: 'run clean'
 
 - task: Npm@1
   displayName: Compile
   inputs:
     command: custom
-    customCommand: 'compile'
+    customCommand: 'run compile'
 
 - task: Npm@1
   displayName: Pack
   inputs:
     command: custom
-    customCommand: 'pack-packages'
+    customCommand: 'run pack-packages'
 
 # - task: Npm@1
 #   displayName: publish

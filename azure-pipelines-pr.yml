@@ -30,10 +30,10 @@ steps:
   displayName: Clean
   inputs:
     command: custom
-    customCommand: 'clean'
+    customCommand: 'run clean'
 
 - task: Npm@1
   displayName: Compile
   inputs:
     command: custom
-    customCommand: 'compile'
+    customCommand: 'run compile'
