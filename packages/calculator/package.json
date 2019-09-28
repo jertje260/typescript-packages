@@ -19,8 +19,8 @@
     "author": "Jeroen Broekhuizen",
     "license": "ISC",
     "dependencies": {
-        "@jeroen/add": "1.0.0",
-        "@jeroen/subtract": "1.0.0"
+        "@jeroen/add": "^1.0.0",
+        "@jeroen/subtract": "^1.0.0"
     },
     "devDependencies": {
         "@types/jest": "^24.0.18",
