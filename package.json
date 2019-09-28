@@ -8,7 +8,8 @@
         "test": "jest",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
-        "pack-packages": "lerna run pack"
+        "pack-packages": "lerna run pack",
+        "publish-packages": "lerna publish"
     },
     "keywords": [],
     "author": "",

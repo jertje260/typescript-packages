@@ -43,6 +43,10 @@ steps:
     command: custom
     customCommand: 'run pack-packages'
 
+- task: npmAuthenticate@0
+  inputs:
+    customEndpoint: https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/
+
 # - task: Npm@1
 #   displayName: publish
 #   inputs:
@@ -50,5 +54,11 @@ steps:
 #     customCommand: 'publish-packages'
 #     publishRegistry: useFeed
 #     publishFeed: '8f9bd9e8-884b-45bf-bf27-f678c286d67a'
+
+# - task: Npm@1
+#   displayName: Publish
+#   inputs:
+#     command: custom
+#     customCommand: 'run publish-packages'
 
 
