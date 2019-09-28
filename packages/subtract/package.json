@@ -4,6 +4,9 @@
     "description": "",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/"
+    },
     "files": [
         "dist/**/*"
     ],
