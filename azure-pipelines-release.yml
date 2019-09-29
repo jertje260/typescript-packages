@@ -43,7 +43,7 @@ steps:
 
 - task: Bash@3
   displayName: Git Reset
-  input:
+  inputs:
     targetType: inline
     script: git reset --hard
 
