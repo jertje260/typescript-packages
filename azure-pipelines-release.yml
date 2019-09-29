@@ -37,6 +37,9 @@ steps:
     command: custom
     customCommand: 'run compile'
 
+- task: Bash@3
+  inputs:
+    script: 'git diff'
 # - task: Npm@1
 #   displayName: Pack
 #   inputs:
