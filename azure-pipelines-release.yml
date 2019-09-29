@@ -41,13 +41,11 @@ steps:
     command: custom
     customCommand: 'run compile'
 
-# - task: Npm@1
-#   displayName: publish
-#   inputs:
-#     command: custom
-#     customCommand: 'publish-packages'
-#     publishRegistry: useFeed
-#     publishFeed: '8f9bd9e8-884b-45bf-bf27-f678c286d67a'
+- task: Bash@3
+  displayName: Git Reset
+  input:
+    targetType: inline
+    script: git reset --hard
 
 - task: Npm@1
   displayName: Publish
