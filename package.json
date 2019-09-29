@@ -9,7 +9,7 @@
         "clean": "lerna run clean",
         "compile": "lerna run compile",
         "pack-packages": "lerna run pack",
-        "publish-packages": "lerna publish --no-git-reset --yes "
+        "publish-packages": "lerna publish --no-git-reset --skip-git --yes "
     },
     "keywords": [],
     "author": "",
@@ -28,7 +28,8 @@
             "packages"
         ]
     },
-    "dependencies": {
+    "devDependencies": {
+        "jest-junit": "^8.0.0",
         "lerna": "^3.16.4",
         "@types/jest": "^24.0.18",
         "jest": "^24.9.0",
