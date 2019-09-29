@@ -5,7 +5,6 @@
     "version": "independent",
     "command": {
         "publish": {
-            "registry": "https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/",
             "directory": "dist"
         }
     }
