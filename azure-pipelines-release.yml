@@ -41,6 +41,12 @@ steps:
     command: custom
     customCommand: 'run compile'
 
+- task: Bash@3
+  displayName: Git Reset
+  inputs:
+    targetType: inline
+    script: git reset --hard
+
 - task: Npm@1
   displayName: Publish
   inputs:
