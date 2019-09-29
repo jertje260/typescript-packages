@@ -12,4 +12,7 @@ describe("When adding", () => {
 	it("2 + 1 should be 3", () => {
 		expect(Add(2, 1)).toBe(3);
 	});
+	it("2 + 2 should be 4", () => {
+		expect(Add(2, 2)).toBe(4);
+	});
 });
