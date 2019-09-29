@@ -39,7 +39,8 @@ steps:
 
 - task: Bash@3
   inputs:
-    script: 'cd typescript-packages && git reset --hard'
+    targetType: inline
+    script: 'git diff'
 # - task: Npm@1
 #   displayName: Pack
 #   inputs:
