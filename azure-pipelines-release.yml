@@ -42,12 +42,6 @@ steps:
     customCommand: 'run compile'
 
 - task: Bash@3
-  displayName: output npmrc
-  inputs:
-    targetType: inline
-    script: cat .npmrc
-
-- task: Bash@3
   displayName: Git Reset
   inputs:
     targetType: inline
