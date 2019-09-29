@@ -39,7 +39,7 @@ steps:
 
 - task: Bash@3
   inputs:
-    script: 'cd typescript-packages && git diff'
+    script: 'cd typescript-packages && git reset --hard'
 # - task: Npm@1
 #   displayName: Pack
 #   inputs:
