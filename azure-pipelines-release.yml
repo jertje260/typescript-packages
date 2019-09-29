@@ -14,6 +14,10 @@ trigger:
 
 
 steps:
+- task: npmAuthenticate@0
+  inputs:
+    workingFile: '.npmrc'
+
 - task: Npm@1
   displayName: Install
   inputs:
@@ -36,10 +40,6 @@ steps:
   inputs:
     command: custom
     customCommand: 'run compile'
-
-- task: npmAuthenticate@0
-  inputs:
-    workingFile: '.npmrc'
 
 # - task: Npm@1
 #   displayName: publish
