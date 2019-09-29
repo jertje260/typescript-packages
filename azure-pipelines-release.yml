@@ -37,9 +37,9 @@ steps:
     command: custom
     customCommand: 'run compile'
 
-- task: Bash@3
-  inputs:
-    script: 'ls'
+# - task: Bash@3
+#   inputs:
+#     script: 'ls'
 # - task: Npm@1
 #   displayName: Pack
 #   inputs:
