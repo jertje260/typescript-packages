@@ -9,7 +9,7 @@
         "clean": "lerna run clean",
         "compile": "lerna run compile",
         "pack-packages": "lerna run pack",
-        "publish-packages": "lerna publish from-package --no-git-reset --yes "
+        "publish-packages": "lerna publish from-package --yes "
     },
     "keywords": [],
     "author": "",

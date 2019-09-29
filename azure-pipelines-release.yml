@@ -37,19 +37,9 @@ steps:
     command: custom
     customCommand: 'run compile'
 
-- task: Bash@3
+- task: npmAuthenticate@0
   inputs:
-    targetType: inline
-    script: 'git checkout -- package-lock.json'
-# - task: Npm@1
-#   displayName: Pack
-#   inputs:
-#     command: custom
-#     customCommand: 'run pack-packages'
-
-# - task: npmAuthenticate@0
-#   inputs:
-#     customEndpoint: https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/
+    workingFile: '.npmrc'
 
 # - task: Npm@1
 #   displayName: publish
