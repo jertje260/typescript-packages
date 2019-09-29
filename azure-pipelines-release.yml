@@ -18,28 +18,28 @@ steps:
   inputs:
     workingFile: '.npmrc'
 
-# - task: Npm@1
-#   displayName: Install
-#   inputs:
-#     command: install
+- task: Npm@1
+  displayName: Install
+  inputs:
+    command: install
 
-# - task: Npm@1
-#   displayName: Test
-#   inputs:
-#     command: custom
-#     customCommand: 'test'
+- task: Npm@1
+  displayName: Test
+  inputs:
+    command: custom
+    customCommand: 'test'
 
-# - task: Npm@1
-#   displayName: Clean
-#   inputs:
-#     command: custom
-#     customCommand: 'run clean'
+- task: Npm@1
+  displayName: Clean
+  inputs:
+    command: custom
+    customCommand: 'run clean'
 
-# - task: Npm@1
-#   displayName: Compile
-#   inputs:
-#     command: custom
-#     customCommand: 'run compile'
+- task: Npm@1
+  displayName: Compile
+  inputs:
+    command: custom
+    customCommand: 'run compile'
 
 - task: Bash@3
   displayName: output npmrc
@@ -47,16 +47,16 @@ steps:
     targetType: inline
     script: cat .npmrc
 
-# - task: Bash@3
-#   displayName: Git Reset
-#   inputs:
-#     targetType: inline
-#     script: git reset --hard
+- task: Bash@3
+  displayName: Git Reset
+  inputs:
+    targetType: inline
+    script: git reset --hard
 
-# - task: Npm@1
-#   displayName: Publish
-#   inputs:
-#     command: custom
-#     customCommand: 'run publish-packages'
+- task: Npm@1
+  displayName: Publish
+  inputs:
+    command: custom
+    customCommand: 'run publish-packages'
 
 
