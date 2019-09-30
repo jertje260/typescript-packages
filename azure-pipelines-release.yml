@@ -43,26 +43,28 @@ steps:
     targetType: inline
     script: 'git reset --hard'
 
-- task: Bash@3
-  displayName: Create npmrc file
-  inputs:
-    targetType: inline
-    script: 'touch .npmrc && echo "registry=https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/" > .npmrc'
+# - task: Bash@3
+#   displayName: Create npmrc file
+#   inputs:
+#     targetType: inline
+#     script: 'touch .npmrc && echo "registry=https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/" > .npmrc'
 
-- task: Npm@1
-  displayName: Set registry
-  inputs:
-    command: custom
-    customCommand: 'config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/'
+# - task: Npm@1
+#   displayName: Set registry
+#   inputs:
+#     command: custom
+#     customCommand: 'config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/'
 
-- task: npmAuthenticate@0
-  inputs:
-    workingFile: '.npmrc'
+# - task: npmAuthenticate@0
+#   inputs:
+#     workingFile: '.npmrc'
 
 - task: Npm@1
   displayName: Publish
   inputs:
     command: custom
     customCommand: 'run publish-packages'
+    customRegistry: useFeed
+    customFeed: '8f9bd9e8-884b-45bf-bf27-f678c286d67a'
 
 
