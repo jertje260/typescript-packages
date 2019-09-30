@@ -6,6 +6,7 @@
     "scripts": {
         "install": "lerna bootstrap",
         "test": "jest",
+        "test:ci": "jest --ci --reporters=default --reporters=jest-junit --coverage",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
         "pack-packages": "lerna run pack",

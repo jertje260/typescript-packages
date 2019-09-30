@@ -24,7 +24,14 @@ steps:
   displayName: Test
   inputs:
     command: custom
-    customCommand: 'test'
+    customCommand: 'run test:ci'
+
+- task: PublishTestResults@2
+  displayName: Publish Test Results
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/junit.xml' 
+
 
 - task: Npm@1
   displayName: Clean
