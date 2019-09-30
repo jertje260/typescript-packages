@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "install": "git update-index --assume-unchanged .npmrc && lerna bootstrap",
+        "install": "lerna bootstrap",
         "test": "jest",
         "clean": "lerna run clean",
         "compile": "lerna run compile",
