@@ -32,6 +32,12 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/junit.xml' 
 
+- task: PublishCodeCoverageResults@1
+  displayName: Publish code coverage
+  inputs:
+    codeCoverageTool: 'cobertura'
+    summaryFileLocation: 'coverage/coberture-coverage.xml'
+
 
 - task: Npm@1
   displayName: Clean
