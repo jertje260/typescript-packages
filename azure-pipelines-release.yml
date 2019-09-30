@@ -14,6 +14,16 @@ trigger:
 
 
 steps:
+- task: Bash@3
+  displayName: Create npmrc file
+  inputs:
+    targetType: inline
+    script: 'touch .npmrc && echo "registry=https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/" > .npmrc'
+
+- task: npmAuthenticate@0
+  inputs:
+    workingFile: '.npmrc'
+
 - task: Npm@1
   displayName: Install
   inputs:
@@ -42,22 +52,6 @@ steps:
   inputs:
     targetType: inline
     script: 'git reset --hard'
-
-- task: Bash@3
-  displayName: Create npmrc file
-  inputs:
-    targetType: inline
-    script: 'touch .npmrc && echo "registry=https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/" > .npmrc'
-
-- task: npmAuthenticate@0
-  inputs:
-    workingFile: '.npmrc'
-
-- task: Bash@3
-  displayName: Copy .npmrc file
-  inputs:
-    targetType: inline
-    script: 'for dir in packages/*; do (cp .npmrc ${dir}/.npmrc); done'
 
 - task: Npm@1
   displayName: Publish
