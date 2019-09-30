@@ -19,6 +19,12 @@ steps:
     workingFile: '.npmrc'
 
 - task: Npm@1
+  displayName: Rebuild
+  inputs:
+    command: custom
+    customCommand: rebuild
+
+- task: Npm@1
   displayName: Install
   inputs:
     command: install
