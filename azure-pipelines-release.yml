@@ -41,11 +41,17 @@ steps:
     command: custom
     customCommand: 'run compile'
 
-- task: Bash@3
-  displayName: Git Reset
+# - task: Bash@3
+#   displayName: Git Reset
+#   inputs:
+#     targetType: inline
+#     script: git reset --hard
+
+- task: Npm@1
+  displayName: Set Registry
   inputs:
-    targetType: inline
-    script: git reset --hard
+    command: custom
+    customCommand: config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/
 
 - task: Npm@1
   displayName: Publish
