@@ -45,3 +45,4 @@ packages/**/dist
 *.tgz
 *.tsbuildinfo
 .npmrc
+**/package-lock.json
