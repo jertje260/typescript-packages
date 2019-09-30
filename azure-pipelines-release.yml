@@ -49,6 +49,12 @@ steps:
     targetType: inline
     script: 'touch .npmrc && echo "registry=https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/" > .npmrc'
 
+- task: Npm@1
+  displayName: Set registry
+  inputs:
+    command: custom
+    customCommand: 'config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/'
+
 - task: npmAuthenticate@0
   inputs:
     workingFile: '.npmrc'
