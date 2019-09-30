@@ -38,6 +38,12 @@ steps:
     customCommand: 'run compile'
 
 - task: Bash@3
+  displayName: Git reset
+  inputs:
+    targetType: inline
+    script: 'git reset --hard'
+
+- task: Bash@3
   displayName: Create npmrc file
   inputs:
     targetType: inline
