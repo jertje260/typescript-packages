@@ -46,7 +46,7 @@ steps:
   displayName: 'Publish code coverage from **/coverage.cobertura.xml'
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/**/coverage.cobertura.xml'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/**/cobertura-coverage.xml'
     reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
   condition: always()
 
@@ -62,10 +62,6 @@ steps:
   inputs:
     command: custom
     customCommand: 'run compile'
-    
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  condition: always()
 
 - task: Bash@3
   displayName: Git reset
