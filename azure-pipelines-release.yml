@@ -47,11 +47,11 @@ steps:
 #     targetType: inline
 #     script: git reset --hard
 
-- task: Npm@1
-  displayName: Set Registry
-  inputs:
-    command: custom
-    customCommand: config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/
+# - task: Npm@1
+#   displayName: Set Registry
+#   inputs:
+#     command: custom
+#     customCommand: config set registry https://pkgs.dev.azure.com/jbroekhuizen/_packaging/PrivateFeed/npm/registry/
 
 - task: Npm@1
   displayName: Publish
