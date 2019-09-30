@@ -1,6 +1,6 @@
 {
     "name": "@jeroen/calculator",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -19,8 +19,8 @@
     "author": "Jeroen Broekhuizen",
     "license": "ISC",
     "dependencies": {
-        "@jeroen/add": "^1.0.1",
-        "@jeroen/subtract": "^1.0.0"
+        "@jeroen/add": "^1.0.2",
+        "@jeroen/subtract": "^1.0.1"
     },
     "devDependencies": {
         "@types/jest": "^24.0.18",
